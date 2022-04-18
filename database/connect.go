@@ -3,17 +3,18 @@ package database
 import (
 	_ "database/sql"
 	"fmt"
-	"github.com/yeongsummer/Restful-api-with-go/config"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
 
 var DB *gorm.DB
 
-func ConnetDB() {
-	var err error
+func MakeDSN(dbUser string, dbPassword string, dbName string) string {
+	return fmt.Sprintf("%s:%s@tcp(localhost:3306)/%s?charset=utf8mb4&parseTime=True&loc=Local", dbUser, dbPassword, dbName)
+}
 
-	dsn := fmt.Sprintf("%s:%s@tcp(localhost:3306)/%s?charset=utf8mb4&parseTime=True&loc=Local", config.Config("DB_USER"), config.Config("DB_PASSWORD"), config.Config("DB_NAME"))
+func ConnetDB(dsn string) {
+	var err error
 
 	DB, err = gorm.Open(mysql.Open(dsn))
 
