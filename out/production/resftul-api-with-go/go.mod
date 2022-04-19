@@ -1,4 +1,4 @@
-module github.com/yeongsummer/Restful-api-with-go
+module github.com/yeongsummer/restful-api-with-go
 
 go 1.18
 

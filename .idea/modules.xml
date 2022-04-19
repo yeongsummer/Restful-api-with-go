@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Resftul-api-with-go.iml" filepath="$PROJECT_DIR$/Resftul-api-with-go.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restful-api-with-go.iml" filepath="$PROJECT_DIR$/restful-api-with-go.iml" />
     </modules>
   </component>
 </project>

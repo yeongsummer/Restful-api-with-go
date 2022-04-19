@@ -1,8 +1,7 @@
 package main
 
 import (
-	"github.com/gofiber/fiber/v2"
-	"github.com/yeongsummer/Restful-api-with-go/database"
+	"github.com/yeongsummer/restful-api-with-go/database"
 )
 
 func main() {

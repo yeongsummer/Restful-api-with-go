@@ -10,7 +10,7 @@ import (
 var DB *gorm.DB
 
 func MakeDSN(dbUser string, dbPassword string, dbName string) string {
-	return fmt.Sprintf("%s:%s@tcp(localhost:3306)/%s?charset=utf8mb4&parseTime=True&loc=Local", dbUser, dbPassword, dbName)
+	return fmt.Sprintf("%s:%s@tcp(127.0.0.1:3306)/%s?charset=utf8mb4&parseTime=True&loc=Local", dbUser, dbPassword, dbName)
 }
 
 func ConnetDB(dsn string) {

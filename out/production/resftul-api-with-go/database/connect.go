@@ -3,7 +3,7 @@ package database
 import (
 	_ "database/sql"
 	"fmt"
-	"github.com/yeongsummer/Restful-api-with-go/config"
+	"github.com/yeongsummer/restful-api-with-go/config"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"log"
