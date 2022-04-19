@@ -3,6 +3,7 @@ package database
 import (
 	_ "database/sql"
 	"fmt"
+	"github.com/yeongsummer/restful-api-with-go/internal/model"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -23,5 +24,8 @@ func ConnetDB(dsn string) {
 	}
 
 	fmt.Println("Connection Opened to Database")
+
+	DB.AutoMigrate(&model.Note{})
+	fmt.Println("Database Migrated")
 
 }

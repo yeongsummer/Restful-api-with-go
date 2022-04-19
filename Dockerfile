@@ -1,15 +1,6 @@
 FROM golang:1.18-alpine
 
-WORKDIR /app
+RUN apk update && apk add git
+WORKDIR /go/src
 
-COPY go.mod ./
-COPY go.sum ./
-RUN go mod download
-
-EXPOSE 8080
-
-COPY ./ ./
-
-RUN go build
-
-CMD [ "/restful-api-with-go" ]
+CMD ["go", "run", "main.go"]
